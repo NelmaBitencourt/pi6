@@ -6,6 +6,7 @@
 			$email = $_POST['email'];
    $senha = $_POST['senha'];
 
+   // Adicionando importações
    require_once '../modelo/Fornecedor.service.php';
    require_once '../modelo/Fornecedor.model.php';
    require_once '../BaseDados/Conexao.php';
