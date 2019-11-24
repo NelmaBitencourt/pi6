@@ -1,0 +1,26 @@
+.planos-item {
+    width: 250px;
+    height: 370px;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #eaeaea;
+    box-shadow: 3px 3px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.planos-item img {
+    width: 70px;
+    align-self: center;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.planos-item p {
+    color: #2a3646;
+}
+
+.planos-item h3 {
+    margin-top: 2px;
+    margin-bottom: 25px;
+}
