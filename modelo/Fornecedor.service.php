@@ -38,7 +38,7 @@
 
 			$stmt->bindValue(':email', $this->fornecedor->__get('$for_ds_email'));
 
-			$stmt->bindValue(':senha', $this->fornecedor->__get('$for_ds_senha'));
+			$stmt->bindValue(':senha', md5($this->fornecedor->__get('$for_ds_senha')));
 			$stmt->execute();
 
 		}
@@ -50,7 +50,7 @@
 
 			$stmt = $this->conexao->prepare($query);
 			$stmt->bindValue(':email', $email);
-			$stmt->bindValue(':senha', $senha);
+			$stmt->bindValue(':senha', md5($senha));
 			$stmt->execute();
 
 			$f =  $stmt->fetchAll(PDO::FETCH_OBJ);
