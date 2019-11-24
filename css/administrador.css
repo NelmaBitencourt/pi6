@@ -1,0 +1,152 @@
+#menu li>span {
+    list-style: none;
+    margin-left: 20px;
+    color: #f6ca14;
+    display: block;
+    padding: 10px;
+    font-weight: 700;
+}
+
+#header-adm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 45px;
+}
+
+
+#header-plano {
+    color: #2a3646;
+    font-weight: 700;
+}
+
+#header-plano h3 {
+    color: #f6ca14;
+}
+
+#header-plano a {
+    color: #f6ca14;
+}
+
+#menu-adm {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu-adm li {
+    list-style: none;
+    margin-left: 15px;
+}
+
+#menu-adm li a {
+    color: #2a3646;
+    background-color: #f6ca14;
+    border: 1px solid #fff;
+    display: block;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu-adm li a:hover {
+    color: #2a3646;
+    background-color: #fff;
+    border: 1px solid #f6ca14;
+    border-radius: 4px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.adm-item {
+    width: 400px;
+    height: 370px;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.adm-item h2:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding-top: 10px;
+    border-bottom: 2px solid #f6ca14;
+}
+
+
+.adm-item p {
+    color: #2a3646;
+}
+
+
+.adm-cliente {
+    list-style: none;
+}
+
+.adm-cliente ul {
+    list-style: none;
+}
+
+.adm-cliente li {
+    margin-left: 0px;
+}
+
+
+.adm-anuncio {}
+
+
+.adm-anuncio p {
+    color: #2a3646;
+}
+
+.adm-anuncio h4 {
+    margin: 15px 0;
+    text-align: center;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    margin-bottom: 70px;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.editar {
+    font-weight: 700;
+    color: green;
+}
+
+.deletar {
+    font-weight: 700;
+    color: red;
+}
+
+.editar:hover,
+.deletar:hover {
+    text-decoration: none;
+}
+
+form div {
+    margin-bottom: 15px;
+}
