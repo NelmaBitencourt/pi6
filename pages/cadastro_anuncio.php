@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['fornecedor'])) {
+    header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -17,8 +23,12 @@
         <nav>
             <ul id="menu">
                 <li><a href="index.php">Início</a></li>
-                <li><span>Nome do Usuario/adm (se quiser)</span></li>
-                <li><a href="">Sair</a></li>
+                <li><span>
+                    <?php 
+                            echo $_SESSION["fornecedor"]->for_nm_fornecedor;
+                        ?>
+                </span></li>
+                <li><a href="../php/logout.php">Sair</a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +42,7 @@
         </section>
         <section id="section">
             <div id="cadastro">
-                <form action="" method="post" id="formulario">
+                <form action="../php/CadastrarAnuncio.php" method="post" id="formulario" enctype="multipart/form-data">
                     <div class="form-col">
                         <div class="input">
                             <label>Nome</label>
@@ -48,7 +58,7 @@
                         </div>
                     </div>
                     <div class="form-btn">
-                        <button type="submit" name="cadastro" class="btn">Cadastrar anúncio</button>
+                        <button type="submit" class="btn">Cadastrar anúncio</button>
                     </div>
                 </form>
             </div>

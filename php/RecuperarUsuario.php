@@ -16,16 +16,16 @@
    $fornecedor = $fornecedorService->recuperar($email, $senha);
 
    if ($fornecedor) {
-				header("Location: ../pages/index.php");
 				$_SESSION["fornecedor"] = $fornecedor;
-			
+				header("Location: ../pages/administrador.php");
+							
 			} else {
 				header("Location: ../pages/login.php?erro=1");
 			}
 
-		}catch(PDOException $e){
-			echo 'Erro: '.$e->getCode().' Mensagem: '.$e->getMessage();
-		}
- }
+	}catch(PDOException $e){
+		echo 'Erro: '.$e->getCode().' Mensagem: '.$e->getMessage();
+	}
+}
 
 	

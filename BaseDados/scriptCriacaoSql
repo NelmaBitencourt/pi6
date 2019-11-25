@@ -4,7 +4,7 @@ create table USU_usuario(
   usu_ds_email varchar(100) not null,
   usu_ds_senha varchar(40) not null,
   usu_ds_tipo_usuario varchar(20) not null
-)
+);
 create table FOR_fornecedor(
 	for_id_fornecedor int not null primary key auto_increment,
 	for_nm_fornecedor varchar(100) not null,
@@ -17,4 +17,12 @@ create table FOR_fornecedor(
 	for_ds_sexo varchar(20) not null,
 	for_ds_email varchar(100)not null,
 	for_ds_senha varchar(60) not null
-)
+);
+CREATE TABLE PAN_panfleto(
+    pan_id_panfleto int not null primary key auto_increment,
+    pan_nm_titulo varchar(100) not null,
+    pan_ds_descricao varchar(300) not null,
+    pan_img_imagem varchar(300) not null,
+    pan_id_fornecedor int not null
+   );
+ alter TABLE PAN_panfleto add FOREIGN KEY (pan_id_fornecedor) REFERENCES FOR_fornecedor(for_id_fornecedor);

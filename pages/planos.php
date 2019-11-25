@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -37,7 +41,14 @@
                         </p>
                         <h3>R$ 19,90</h3>
                         <div id="formulario">
-                            <button type="submit" name="item-prata" class="btn">Comprar</button>
+                            <?php
+                            if (!isset($_SESSION['fornecedor'])) {
+                                echo "<a href='login.php' name='item-prata' class='btn'>Comprar</a>";
+                            } else {
+                                echo '<button type="submit" name="item-prata" class="btn">Comprar</button>';
+                            }
+                            ?>
+                            
                         </div>
                     </div>
                     <div class="planos-item">
@@ -49,7 +60,13 @@
                         </p>
                         <h3>R$ 39,90</h3>
                         <div id="formulario">
-                            <button type="submit" name="item-ouro" class="btn">Comprar</button>
+                            <?php
+                            if (!isset($_SESSION['fornecedor'])) {
+                                echo "<a href='login.php' name='item-ouro' class='btn'>Comprar</a>";
+                            } else {
+                                echo '<button type="submit" name="item-ouro" class="btn">Comprar</button>';
+                            }
+                            ?>
                         </div>
                     </div>
                     <div class="planos-item">
@@ -60,7 +77,13 @@
                         </p>
                         <h3>R$ 9,90</h3>
                         <div id="formulario">
-                            <button type="submit" name="item-bronze" class="btn">Comprar</button>
+                            <?php
+                            if (!isset($_SESSION['fornecedor'])) {
+                                echo "<a href='login.php' name='item-bronze' class='btn'>Comprar</a>";
+                            } else {
+                                echo '<button type="submit" name="item-bronze" class="btn">Comprar</button>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

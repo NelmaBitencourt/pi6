@@ -13,6 +13,11 @@
 		}
 		
 		public function inserir(){
+
+			if ($this->recuperar($this->fornecedor->email, $this->fornecedor->senha)) {
+				return false;
+			}
+
 			$query = 'insert into FOR_fornecedor(
 				for_nm_fornecedor, 
 				for_ds_data_nascimento,
@@ -41,6 +46,7 @@
 			$stmt->bindValue(':senha', md5($this->fornecedor->__get('$for_ds_senha')));
 			$stmt->execute();
 
+			return true;
 		}
 
 		public function recuperar($email, $senha){
@@ -79,6 +85,7 @@
 
 			return null;
 		}
+
 
 		public function atualizar(){
 
