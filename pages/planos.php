@@ -43,7 +43,7 @@ session_start();
                         <div id="formulario">
                             <?php
                             if (!isset($_SESSION['fornecedor'])) {
-                                echo "<a href='login.php' name='item-prata' class='btn'>Comprar</a>";
+                                echo "<button name='item-prata' class='btn'><a href='login.php'>Comprar</a></button>";
                             } else {
                                 echo '<button type="submit" name="item-prata" class="btn">Comprar</button>';
                             }
@@ -62,7 +62,7 @@ session_start();
                         <div id="formulario">
                             <?php
                             if (!isset($_SESSION['fornecedor'])) {
-                                echo "<a href='login.php' name='item-ouro' class='btn'>Comprar</a>";
+                                echo "<button name='item-ouro' class='btn' ><a href='login.php' >Comprar</a></button>";
                             } else {
                                 echo '<button type="submit" name="item-ouro" class="btn">Comprar</button>';
                             }
@@ -79,7 +79,7 @@ session_start();
                         <div id="formulario">
                             <?php
                             if (!isset($_SESSION['fornecedor'])) {
-                                echo "<a href='login.php' name='item-bronze' class='btn'>Comprar</a>";
+                                echo "<button name='item-bronze' class='btn'> <a href='login.php' >Comprar</a></button>";
                             } else {
                                 echo '<button type="submit" name="item-bronze" class="btn">Comprar</button>';
                             }

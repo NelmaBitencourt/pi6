@@ -36,11 +36,11 @@
                     <div class="form-col">
                         <div class="input">
                             <label>E-mail:</label>
-                            <input type="email" name="email" value="">
+                            <input type="email" name="email" value="" required>
                         </div>
                         <div class="input">
                             <label>Senha:</label>
-                            <input type="password" name="senha" value="">
+                            <input type="password" name="senha" value="" required>
                         </div>
                     </div>
                 </div>
