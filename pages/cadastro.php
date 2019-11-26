@@ -37,22 +37,22 @@
                         <legend>Dados pessoais</legend>
                         <div class="input">
                             <label>Nome:</label>
-                            <input type="text" name="nome" value="">
+                            <input type="text" name="nome" value="" required>
                         </div>
                         <div class="input">
                             <label>Sobrenome:</label>
-                            <input type="text" name="sobrenome" value="">
+                            <input type="text" name="sobrenome" value="" required>
                         </div>
                         <div class="input">
                             <label>Nascimento:</label>
-                            <input type="text" name="dia" size="2" maxlength="2" placeholder="dd">
-                            <input type="text" name="mes" size="2" maxlength="2" placeholder="mm">
-                            <input type="text" name="ano" size="4" maxlength="4" placeholder="aaaa">
+                            <input type="text" name="dia" size="2" maxlength="2" placeholder="dd" required>
+                            <input type="text" name="mes" size="2" maxlength="2" placeholder="mm" required>
+                            <input type="text" name="ano" size="4" maxlength="4" placeholder="aaaa" required>
                         </div>
                         <div class="input">
                             <label>Sexo:</label>
                             <label class="checkbox">
-                                <input type="radio" name="sexo" value="feminino"> Feminino
+                                <input type="radio" name="sexo" value="feminino" required> Feminino
                             </label>
                             <label class="checkbox">
                                 <input type="radio" name="sexo" value="masculino"> Masculino
@@ -60,11 +60,11 @@
                         </div>
                         <div class="input">
                             <label>E-mail:</label>
-                            <input type="email" name="email" value="">
+                            <input type="email" name="email" value="" required>
                         </div>
                         <div class="input">
                             <label>Senha:</label>
-                            <input type="password" name="senha" value="">
+                            <input type="password" name="senha" value="" required>
                         </div>
                     </div>
                     <!-- dados de endereço -->
@@ -72,15 +72,15 @@
                         <legend>Dados de endereço</legend>
                         <div class="input">
                             <label>Endereço:</label>
-                            <input type="text" name="endereco" value="">
+                            <input type="text" name="endereco" value="" required>
                         </div>
                         <div class="input">
                             <label>Numero:</label>
-                            <input type="text" size="4" name="numero" value="">
+                            <input type="text" size="4" name="numero" value="" required>
                         </div>
                         <div class="input">
                             <label>Cidade:</label>
-                            <input type="text" name="cidade" value="">
+                            <input type="text" name="cidade" value="" required>
                         </div>
                     </div>
                 </div>
