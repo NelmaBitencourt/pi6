@@ -3,6 +3,7 @@ session_start();
 if (!isset($_SESSION['fornecedor'])) {
     header("Location: login.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +43,11 @@ if (!isset($_SESSION['fornecedor'])) {
         </section>
         <section id="section">
             <div id="cadastro">
-                <form action="../php/CadastrarAnuncio.php" method="post" id="formulario" enctype="multipart/form-data">
+                <? if (!isset($_GET['id'])){ ?>
+                    <form action="../php/CadastrarAnuncio.php" method="post" id="formulario" enctype="multipart/form-data">
+                <? }else{ ?>
+                    <form action="../php/AlterarAnuncio.php" method="post" id="formulario" enctype="multipart/form-data">
+                <? } ?>                
                     <div class="form-col">
                         <div class="input">
                             <label>Nome</label>
@@ -56,6 +61,10 @@ if (!isset($_SESSION['fornecedor'])) {
                             <label>Imagem</label>
                             <input type="file" name="image" class="text-input">
                         </div>
+                        <? if (isset($_GET['id'])){ ?>
+                            <input type="text" name="id" <? echo 'value="'. $_GET['id'] .'"'; ?> hidden>
+                        <? } ?>
+                        
                     </div>
                     <div class="form-btn">
                         <button type="submit" class="btn">Cadastrar anúncio</button>

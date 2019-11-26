@@ -100,8 +100,10 @@ $panfletos = $stm->fetchAll(PDO::FETCH_OBJ);
                                 <tr>
                                     <td> <? echo $panfleto->pan_nm_titulo; ?> </td>
                                     <td> <? echo $panfleto->pan_ds_descricao; ?> </td>
-                                    <td><a href="" class="editar">editar</a></td>
-                                    <td><a href="" class="deletar">deletar</a></td>
+
+                                    <td><a <? echo 'href="cadastro_anuncio.php?id='.$panfleto->pan_id_panfleto.'"'; ?>class="editar">editar</a></td>
+
+                                    <td><a <? echo 'href="../php/RemoverPanfleto.php?id='.$panfleto->pan_id_panfleto.'"'; ?> class="deletar">deletar</a></td>
                                 </tr>
                             <? } ?>
                         </tbody>
