@@ -1,0 +1,169 @@
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+#cadastro {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#cadastro legend {
+    margin: 15px auto;
+    color: #f6ca14;
+    font-weight: 700;
+}
+
+
+#login {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#contatoform {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#contatoform label {
+    display: block;
+    padding: 5px;
+    font-size: 13px;
+}
+
+#contatoform input {
+    padding: 5px;
+    display: block;
+    width: 150px;
+}
+
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button.btn2 {
+    width: 150px;
+    margin: 17px;
+    padding: 10px;
+    color: #2a3646;
+    background-color: #fff;
+    border: 1px solid #f6ca14;
+    border-radius: 4px;
+    font-size: 19px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+button.btn2 a {
+    color: #111;
+}
+
+button.btn2:hover {
+    color: #111;
+    background-color: #f6ca14;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+button.btn {
+    color: #2a3646;
+    margin: 5px auto;
+    display: block;
+    width: 80px;
+    padding: 10px;
+    font-weight: 700;
+    background-color: #f6ca14;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+button.btn:hover {
+    color: #2a3646;
+    background-color: #fff;
+    border: 1px solid #f6ca14;
+    border-radius: 4px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-btn a {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #fff;
+    color: #2a3646;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-btn a:hover {
+    color: #2a3646;
+    border: 1px solid #f6ca14;
+    border-radius: 4px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.input {
+    padding: 5px;
+    margin-bottom: 12px;
+}
+
+
+.input label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 700;
+}
+
+.input input {
+    padding: 5px;
+}
