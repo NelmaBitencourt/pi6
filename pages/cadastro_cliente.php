@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['fornecedor'])) {
+    header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +23,11 @@
         <nav>
             <ul id="menu">
                 <li><a href="index.php">Início</a></li>
-                <li><span>Nome do Usuario/adm (se quiser)</span></li>
+                <li><span>
+                    <?php 
+                            echo $_SESSION["fornecedor"]->for_nm_fornecedor;
+                        ?>
+                </span></li>
                 <li><a href="">Sair</a></li>
             </ul>
         </nav>
@@ -31,8 +41,12 @@
             </nav>
         </section>
         <section id="section">
-            <form action="" method="post" id="formulario">
-                <div id="cadastro">
+        <? if (!isset($_GET['id'])){ ?>
+                    <form action="../php/CadastrarCliente.php" method="post" id="formulario" enctype="multipart/form-data">
+                <? }else{ ?>
+                    <form action="../php/AlterarCliente.php" method="post" id="formulario" enctype="multipart/form-data">
+                <? } ?>            
+                <div id="cadastro">                    
                     <!-- dados pessoais -->
                     <div class="form-col">
                         <legend>Dados pessoais</legend>
@@ -53,7 +67,7 @@
                         <div class="input">
                             <label>Sexo:</label>
                             <label class="checkbox">
-                                <input type="radio" name="sexo" value="feminino"> Feminino
+                                <input type="radio" name="sexo" value="feminino" required> Feminino
                             </label>
                             <label class="checkbox">
                                 <input type="radio" name="sexo" value="masculino"> Masculino
@@ -65,7 +79,7 @@
                         </div>
                         <div class="input">
                             <label>Senha:</label>
-                            <input type="password" name="" value="" required>
+                            <input type="password" name="senha" value="" required>
                         </div>
                     </div>
                     <!-- dados de endereço -->
@@ -83,6 +97,9 @@
                             <label>Cidade:</label>
                             <input type="text" name="cidade" value="" required>
                         </div>
+                        <? if (isset($_GET['id'])){ ?>
+                            <input type="text" name="id" <? echo 'value="'. $_GET['id'] .'"'; ?> hidden>
+                        <? } ?>
                     </div>
                 </div>
                 <div class="form-btn">
