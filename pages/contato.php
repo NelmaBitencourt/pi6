@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -19,8 +22,13 @@
                 <li><a href="index.php">Início</a></li>
                 <li><a href="planos.php">Planos</a></li>
                 <li><a href="contato.php">Contato</a></li>
-                <li><a href="login.php">Entrar</a></li>
-                <li><a href="cadastro.php" class="call-btn">Cadastre-se</a></li>
+                <? if (!isset($_SESSION['fornecedor'])) { ?>
+                    <li><a href="login.php">Entrar</a></li>
+                    <li><a href="cadastro.php" class="call-btn">Cadastre-se</a></li>
+                <? }else{ ?>
+                    <li><a href="administrador.php" class="call-btn">Administrador</a></li>
+                <? } ?> 
+               
             </ul>
         </nav>
     </header>
