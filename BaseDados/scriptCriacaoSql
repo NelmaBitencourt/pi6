@@ -1,10 +1,5 @@
-create table USU_usuario(
-  usu_id_usuario int not null primary key auto_increment,
-  usu_nm_usuario varchar(60) not null,
-  usu_ds_email varchar(100) not null,
-  usu_ds_senha varchar(40) not null,
-  usu_ds_tipo_usuario varchar(20) not null
-);
+create database projetointegralizador6
+
 create table FOR_fornecedor(
 	for_id_fornecedor int not null primary key auto_increment,
 	for_nm_fornecedor varchar(100) not null,
@@ -26,3 +21,19 @@ CREATE TABLE PAN_panfleto(
     pan_id_fornecedor int not null
    );
  alter TABLE PAN_panfleto add FOREIGN KEY (pan_id_fornecedor) REFERENCES FOR_fornecedor(for_id_fornecedor);
+
+ CREATE TABLE CLI_cliente(
+ 	cli_id_cliente int not null primary key auto_increment,
+	cli_nm_cliente varchar(100) not null,
+	cli_ds_categoria varchar(100),
+	cli_ds_rede_social varchar(100),
+	cli_ds_data_nascimento varchar(8) not null,	
+	cli_ds_endereco varchar(100) not null,
+	cli_ds_cidade varchar (100) not null,
+	cli_num_endereco int not null,
+	cli_ds_sexo varchar(20) not null,
+	cli_ds_email varchar(100)not null,
+	cli_ds_senha varchar(60) not null,
+	cli_id_fornecedor int not null
+ );
+ alter TABLE CLI_cliente add FOREIGN KEY (cli_id_fornecedor) REFERENCES FOR_fornecedor(for_id_fornecedor);
