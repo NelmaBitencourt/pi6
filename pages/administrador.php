@@ -20,6 +20,14 @@ $stm->execute();
 
 $panfletos = $stm->fetchAll(PDO::FETCH_OBJ);
 
+$query2 = "SELECT * FROM CLI_cliente WHERE cli_id_fornecedor = :id";
+$stm = $conexao->prepare($query2);
+$stm->bindValue(":id", $_SESSION["fornecedor"]->for_id_fornecedor);
+
+$stm->execute();
+
+$clientes = $stm->fetchAll(PDO::FETCH_OBJ);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,22 +76,20 @@ $panfletos = $stm->fetchAll(PDO::FETCH_OBJ);
                     <table>
                         <thead>
                             <th>Nome</th>
-                            <th>Panfletos</th>
+                            <th>Email</th>
                             <th colspan="2">Administrar</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Nome</td>
-                                <td>Ilimitado</td>
-                                <td><a href="" class="editar">editar</a></td>
-                                <td><a href="" class="deletar">deletar</a></td>
-                            </tr>
-                            <tr>
-                                <td>Nome 2</td>
-                                <td>8 Panfletos</td>
-                                <td><a href="" class="editar">editar</a></td>
-                                <td><a href="" class="deletar">deletar</a></td>
-                            </tr>
+                            <? foreach ($clientes as $cliente) { ?>
+                                <tr>
+                                    <td> <? echo $cliente->cli_nm_cliente; ?> </td>
+                                    <td> <? echo $cliente->cli_ds_email; ?> </td>
+
+                                    <td><a <? echo 'href="cadastro_cliente.php?id='.$cliente->cli_id_cliente.'"'; ?>class="editar">editar</a></td>
+
+                                    <td><a <? echo 'href="../php/RemoverCliente.php?id='.$cliente->cli_id_cliente.'"'; ?> class="deletar">deletar</a></td>
+                                </tr>
+                            <? } ?>
                         </tbody>
                     </table>
                 </div>
