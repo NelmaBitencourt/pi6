@@ -49,7 +49,7 @@ session_start();
                             if (!isset($_SESSION['fornecedor'])) {
                                 echo "<button name='item-prata' class='btn'><a href='login.php'>Comprar</a></button>";
                             } else {
-                                echo '<button type="submit" name="item-prata" class="btn">Comprar</button>';
+                                 echo "<button name='item-prata' class='btn'><a href='../php/AssinarPlanoPrata.php'>Comprar</a></button>";
                             }
                             ?>
                             
@@ -68,7 +68,7 @@ session_start();
                             if (!isset($_SESSION['fornecedor'])) {
                                 echo "<button name='item-ouro' class='btn' ><a href='login.php' >Comprar</a></button>";
                             } else {
-                                echo '<button type="submit" name="item-ouro" class="btn">Comprar</button>';
+                                echo "<button name='item-ouro' class='btn' ><a href='../php/AssinarPlanoOuro.php' >Comprar</a></button>";
                             }
                             ?>
                         </div>
@@ -85,7 +85,7 @@ session_start();
                             if (!isset($_SESSION['fornecedor'])) {
                                 echo "<button name='item-bronze' class='btn'> <a href='login.php' >Comprar</a></button>";
                             } else {
-                                echo '<button type="submit" name="item-bronze" class="btn">Comprar</button>';
+                                echo "<button name='item-bronze' class='btn'> <a href='../php/AssinarPlanoBronze.php' >Comprar</a></button>";
                             }
                             ?>
                         </div>
