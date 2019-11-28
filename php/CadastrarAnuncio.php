@@ -29,14 +29,9 @@ if (!empty($_POST['nome']) && !empty($_POST['descricao']) && !empty($_FILES['ima
 
 		$stm->execute();
 
-// falta corrigir bug, nao salva o arquivo na pasta.
-		foreach ($_FILES["image"]["error"] as $key => $error) {
-		    if ($error == UPLOAD_ERR_OK) {
-		        $tmp_name = $_FILES["image"]["tmp_name"][$key];
-		        $name = $_FILES["image"]["name"][$key];
-		        move_uploaded_file($tmp_name, "../imgs/".$name);
-		    }
-		}
+		$origem = $_FILES["image"]["tmp_name"];
+		$destino = realpath("../imgs/")."/".$imagem;
+		move_uploaded_file($origem, $destino);
 
 		header("Location: ../pages/cadastro_anuncio.php?inserido=1");
 
