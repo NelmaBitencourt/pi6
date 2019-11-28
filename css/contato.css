@@ -1,0 +1,21 @@
+.form-col li {
+    list-style: none;
+    margin-left: 0px;
+    margin-bottom: 12px;
+}
+
+.form-col ul {
+    list-style: none;
+}
+
+.form-col {
+    font-weight: 700;
+}
+
+
+
+.form-col img {
+    width: 25px;
+    display: inline-block;
+    margin: -5px 10px;
+}
